@@ -1,0 +1,47 @@
+{
+  "skill_name": "reels-analyzer",
+  "evals": [
+    {
+      "id": 1,
+      "name": "self-account-deep-dive",
+      "prompt": "Сделай deep dive разбор моего аккаунта @your_account -- топ-5 reels из последних 30, я хочу понять почему они залетают и что копировать.",
+      "expected_output": "Полный отчёт report_final.md: профиль, exec summary с pattern + strategic gap, по каждому из 5 reels -- метрики, хук с разбором тактики, структура с тайм-кодами, тема, причины залёта, вердикт КОПИРОВАТЬ/АДАПТИРОВАТЬ/ПРОПУСТИТЬ.",
+      "files": [],
+      "assertions": [
+        "Calls analyze.py with --user @your_account (or --user-id 17841400000000000) --top 5 --history 30",
+        "Reads report.json after analyze.py finishes",
+        "Each reel has all 5 LLM analysis fields populated (хук, структура, тема, почему залетает, вердикт)",
+        "Verdict is exactly one of: КОПИРОВАТЬ, АДАПТИРОВАТЬ, ПРОПУСТИТЬ -- with 1-line why",
+        "Executive summary identifies at least 2 strategic gaps with concrete numbers",
+        "Final markdown saved as <out>/report_final.md"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "competitor-research",
+      "prompt": "Проанализируй @your_channel -- я хочу понять что у конкурента залетает в нише AI-контента, без воды, мне нужны ровно хуки и форматы которые можно адаптировать.",
+      "expected_output": "Сжатый отчёт сфокусированный на хуках и форматах. Меньше про метрики, больше про переносимость на свой аккаунт. Каждый вердикт КОПИРОВАТЬ/АДАПТИРОВАТЬ объяснён -- что именно адаптируется (хук / структура / тема / темп).",
+      "files": [],
+      "assertions": [
+        "Tone is direct, no flattery",
+        "Verdicts skew toward АДАПТИРОВАТЬ for niche content (not ПРОПУСТИТЬ)",
+        "Each КОПИРОВАТЬ/АДАПТИРОВАТЬ verdict says exactly what to copy/adapt",
+        "Pattern paragraph notes any common hook structure across the top reels",
+        "Skips boilerplate intro -- jumps straight to insights"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "no-groq-key-graceful",
+      "prompt": "Разбери reels @your_account. Заметь -- у нас сейчас может не быть groq-ключа.",
+      "expected_output": "Pipeline пробует прогнать analyze.py, ловит transcript_error 'Groq key not found', решение: либо (а) предложить установить ключ (https://console.groq.com бесплатно) и подождать, либо (б) проанализировать на основе captions only с пометкой 'caption-only analysis, transcript missing'.",
+      "files": [],
+      "assertions": [
+        "Detects missing Groq key BEFORE running full pipeline (or recovers from the error)",
+        "Tells operator the exact fix command and key path ($GROQ_API_KEY)",
+        "Offers caption-only fallback as a degraded mode, NOT as default",
+        "Flags lower confidence when running caption-only (no hook transcript = guessing)"
+      ]
+    }
+  ]
+}

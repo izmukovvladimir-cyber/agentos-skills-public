@@ -1,0 +1,102 @@
+[
+  {
+    "query": "посмотри @your_account в инсте, сколько у него подписчиков сейчас и какие посты в топе за месяц. интересует именно статистика реелсов",
+    "should_trigger": true,
+    "category": "profile-stats"
+  },
+  {
+    "query": "у конкурента @competitor_account взлетел один ролик на прошлой неделе, можешь достать его комменты и понять какие хуки в подписи работают?",
+    "should_trigger": true,
+    "category": "competitor-comments"
+  },
+  {
+    "query": "сделай ресёрч по хештегу #нейросети на инстаграме, что сейчас в топе, какие аккаунты залетают",
+    "should_trigger": true,
+    "category": "hashtag-research"
+  },
+  {
+    "query": "запусти reels analyzer pipeline для @your_channel -- топ-50 реелсов по просмотрам с транскрибацией аудио",
+    "should_trigger": true,
+    "category": "reels-analyzer"
+  },
+  {
+    "query": "вот ссылка https://www.instagram.com/p/CA2aJYrg6cZ/ -- достань инфу по этому посту, мне нужны лайки/комменты и дата",
+    "should_trigger": true,
+    "category": "post-by-url"
+  },
+  {
+    "query": "instagrapi сколько кредитов осталось на балансе, я планирую большой скрейп",
+    "should_trigger": true,
+    "category": "balance-check"
+  },
+  {
+    "query": "I want to scrape the followers list of @nasa via HikerAPI, does the skill support pagination here?",
+    "should_trigger": true,
+    "category": "english-followers"
+  },
+  {
+    "query": "найди мне 10 ai-блогеров в инстаграме у которых больше 50к подписчиков, ищи через топ-серч",
+    "should_trigger": true,
+    "category": "discovery-search"
+  },
+  {
+    "query": "кто залайкал последний пост у @your_account? хочу увидеть список юзернеймов хотя бы первой страницы",
+    "should_trigger": true,
+    "category": "likers"
+  },
+  {
+    "query": "проанализируй активные сторис у @your_channel -- сколько их сейчас и о чём, сделай таблицу",
+    "should_trigger": true,
+    "category": "stories"
+  },
+  {
+    "query": "помоги мне опубликовать новый ролик в инстаграм через api, у меня готов файл video.mp4",
+    "should_trigger": false,
+    "category": "near-miss-post-not-read"
+  },
+  {
+    "query": "настрой меня инстаграм граф апи через мета бизнес сьют, нужны разрешения для публикации stories",
+    "should_trigger": false,
+    "category": "near-miss-meta-graph-api"
+  },
+  {
+    "query": "напиши скрипт чтобы отслеживать упоминания моего бренда в твиттере и тиктоке",
+    "should_trigger": false,
+    "category": "near-miss-other-platforms"
+  },
+  {
+    "query": "проанализируй мою тикток-страницу @your_account, какие видео залетают и какие хештеги работают",
+    "should_trigger": false,
+    "category": "near-miss-tiktok"
+  },
+  {
+    "query": "у меня instagram-приложение на python, как мне подписаться на webhook про новые комменты через graph api?",
+    "should_trigger": false,
+    "category": "near-miss-graph-webhook"
+  },
+  {
+    "query": "сгенерируй мне 20 идей для reels на тему нейросетей, заголовки и хуки -- я снимать буду на следующей неделе",
+    "should_trigger": false,
+    "category": "near-miss-content-ideation"
+  },
+  {
+    "query": "переведи описание моего профиля @your_account на английский для нового рынка",
+    "should_trigger": false,
+    "category": "near-miss-translate-bio"
+  },
+  {
+    "query": "почему у меня в python urllib падает при запросе к api.hikerapi.com, выдаёт ssl error -- я даже без скилла пробую",
+    "should_trigger": false,
+    "category": "near-miss-debugging-no-skill-needed"
+  },
+  {
+    "query": "посчитай мне ER (engagement rate) у @nasa за последние 30 постов используя данные которые я тебе только что прислал в csv",
+    "should_trigger": false,
+    "category": "near-miss-csv-not-api"
+  },
+  {
+    "query": "сравни статистику моих двух аккаунтов в meta business suite за прошлую неделю",
+    "should_trigger": false,
+    "category": "near-miss-meta-business-suite"
+  }
+]

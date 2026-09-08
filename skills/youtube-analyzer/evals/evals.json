@@ -1,0 +1,49 @@
+{
+  "skill_name": "youtube-analyzer",
+  "evals": [
+    {
+      "id": 1,
+      "name": "single-channel-deep-dive",
+      "prompt": "Сделай deep dive YouTube-канала @your_account -- топ-5 видео, я хочу понять почему они залетают и что копировать.",
+      "expected_output": "Полный отчёт report_final.md: профиль, exec summary с pattern + strategic gap, по каждому из 5 видео -- метрики, title strategy, description hook, video hook 0-2s, retention engineering, CTA architecture, archetype, вердикт (Скопировать формат / Адаптировать / Изучить и развить / Пропустить).",
+      "files": [],
+      "assertions": [
+        "Calls analyze.py with --handle @your_account (or full URL) --top 5",
+        "Reads report.json after analyze.py finishes",
+        "Each video has all 6 LLM analysis fields populated (title strategy, description hook, video hook, retention, CTA, verdict)",
+        "Verdict is exactly one of: Скопировать формат, Адаптировать, Изучить и развить, Пропустить -- with 1-line why",
+        "Executive summary identifies at least 2 strategic gaps with concrete numbers",
+        "Final markdown saved as <out>/report_final.md",
+        "Format detection (Short vs Long) is consistent with duration_s"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "channel-no-captions-groq-fallback",
+      "prompt": "Разбери канал @some_creator_no_subs на ютубе, топ-5. У этого блогера нет субтитров на видео.",
+      "expected_output": "Pipeline пробует caption chain (manual ru/en, auto ru/en) -- все промахиваются. Падает в Groq Whisper fallback (если ключ есть). Каждое видео получает transcript_source='groq_whisper'. Если ключа Groq нет -- transcript_error флагается, отчёт делается caption-only (description + title) с пометкой пониженной уверенности.",
+      "files": [],
+      "assertions": [
+        "Detects no-captions case via empty available_subtitles + available_auto_captions",
+        "Triggers Groq fallback automatically when key is present",
+        "When Groq key missing: tells operator the exact path ($GROQ_API_KEY) and falls back to title+description analysis",
+        "Flags lower confidence when transcript missing",
+        "Verdicts still produced (operator gets value even without transcripts)"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "mixed-shorts-and-long-form",
+      "prompt": "Проанализируй канал @creator_mixed -- хочу понять разрыв между Shorts и длинным контентом, что у них залетает в обоих форматах.",
+      "expected_output": "Pipeline merges /videos and /shorts tabs. Top-5 may contain mix of Short (<=60s) and Long (>60s). Aggregates show shorts_count vs long_count. Per-video format field is correct. Pattern paragraph notes if top-5 skews to one format and what that means strategically.",
+      "files": [],
+      "assertions": [
+        "fetch_channel_listing returns merged entries from both tabs (deduped by id)",
+        "Each record has format='Short' or 'Long' set correctly via duration <=60s rule",
+        "Aggregates report shorts_count + long_count separately",
+        "Pattern observation explicitly addresses the Short-vs-Long mix",
+        "If top-5 is all Shorts on a mixed channel, exec summary calls out the asymmetry"
+      ]
+    }
+  ]
+}

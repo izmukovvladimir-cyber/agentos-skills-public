@@ -1,0 +1,102 @@
+[
+  {
+    "query": "проанализируй reels у @your_account, я хочу понять почему они залетают и что можно скопировать",
+    "should_trigger": true,
+    "category": "self-deep-dive"
+  },
+  {
+    "query": "сделай разбор аккаунта @neuro_official по последним 20 рилсам, нужны хуки и структура каждого",
+    "should_trigger": true,
+    "category": "competitor-research"
+  },
+  {
+    "query": "вот ссылка https://www.instagram.com/reel/DXoF0R5iGL8/ -- разбери этот ролик, почему он собрал 2.7M",
+    "should_trigger": true,
+    "category": "single-reel-analysis"
+  },
+  {
+    "query": "запусти reels analyzer на @your_channel с фокусом на хуки",
+    "should_trigger": true,
+    "category": "explicit-trigger"
+  },
+  {
+    "query": "хочу адаптировать формат конкурента @nasa, дай мне разбор топ-5 чтобы я понял что копировать",
+    "should_trigger": true,
+    "category": "format-adaptation"
+  },
+  {
+    "query": "deep dive по @your_account -- вытащи паттерны виральности, какие темы работают, какие нет",
+    "should_trigger": true,
+    "category": "pattern-extraction"
+  },
+  {
+    "query": "Reels Challenge research -- найди 3 аккаунта в нише ai-маркетинга которые сейчас взлетают, разбери их хуки",
+    "should_trigger": true,
+    "category": "rc-research"
+  },
+  {
+    "query": "виральный разбор: возьми мой аккаунт @your_account и скажи где я слил трафик в воздух",
+    "should_trigger": true,
+    "category": "leverage-points"
+  },
+  {
+    "query": "почему у блогера @aimentor такие просмотры? разбери последние 10 рилсов с транскрибацией звука",
+    "should_trigger": true,
+    "category": "with-transcription"
+  },
+  {
+    "query": "хочу понять что копировать у @neuroreels: метрики, хуки, темп, длительность -- полный разбор топ-5",
+    "should_trigger": true,
+    "category": "what-to-copy"
+  },
+  {
+    "query": "сколько подписчиков у @your_account сейчас?",
+    "should_trigger": false,
+    "category": "near-miss-just-metric"
+  },
+  {
+    "query": "проверь баланс на hikerapi, я планирую большой скрейп",
+    "should_trigger": false,
+    "category": "near-miss-balance"
+  },
+  {
+    "query": "напиши мне 20 идей для рилсов на тему ai-инструментов -- хуки и структуру",
+    "should_trigger": false,
+    "category": "near-miss-content-creation"
+  },
+  {
+    "query": "сделай скрипт для нового рилса -- хук, тело, cta -- тема: как я заработал 2млн на нейросетях",
+    "should_trigger": false,
+    "category": "near-miss-script-writing"
+  },
+  {
+    "query": "помоги опубликовать ролик в инстаграм через api, у меня есть готовый mp4 с описанием",
+    "should_trigger": false,
+    "category": "near-miss-posting"
+  },
+  {
+    "query": "сравни два моих рилса по метрикам -- я уже скачал данные в csv, вот файл",
+    "should_trigger": false,
+    "category": "near-miss-csv-not-api"
+  },
+  {
+    "query": "проанализируй мой тикток @your_account -- какие видео у меня залетают и почему",
+    "should_trigger": false,
+    "category": "near-miss-tiktok"
+  },
+  {
+    "query": "разбери комменты под этим постом https://www.instagram.com/p/CA2aJYrg6cZ/ -- мне нужна тональность аудитории, без видео",
+    "should_trigger": false,
+    "category": "near-miss-comments-only"
+  },
+  {
+    "query": "транскрибируй вот это видео в текст, файл лежит у меня в Downloads/reel.mp4",
+    "should_trigger": false,
+    "category": "near-miss-just-transcription"
+  },
+  {
+    "query": "выгрузи статистику моих 5 аккаунтов из meta business suite за прошлую неделю в excel",
+    "should_trigger": false,
+    "category": "near-miss-meta-suite"
+  }
+]

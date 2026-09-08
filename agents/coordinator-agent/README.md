@@ -53,14 +53,21 @@ Coordinator — это «полу-coding + полу-content + полу-PM» ги
 4. Отправляет отчёт принцу в Telegram
 5. Записывает решение в `learnings` (decision note) — потом другие агенты увидят
 
+### Настройка и напоминания (новое)
+
+- [`onboarding`](../../skills/onboarding/) — мастер первой настройки агента под владельца
+- [`skill-finder`](../../skills/skill-finder/) — поиск готового скилла под задачу
+- [`quick-reminders`](../../skills/quick-reminders/) — разовые напоминания через cron
+
 ## Установка
 
 ```bash
 cd ~/.claude/skills
-git clone https://github.com/qwwiwi/agentos-skills-public.git agentos
+git clone https://github.com/izmukovvladimir-cyber/agentos-skills-public.git agentos
 for skill in agentos-content workshop loop-coding fast-loop-coding cross-review \
   perplexity-research markdown-new transcript chat-archive \
-  present datawrapper excalidraw learnings memory-audit agent-introspection; do
+  present datawrapper excalidraw learnings memory-audit agent-introspection \
+  onboarding skill-finder quick-reminders; do
   cp -r agentos/skills/$skill ./
 done
 ```

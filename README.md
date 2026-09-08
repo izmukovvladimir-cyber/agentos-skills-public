@@ -1,6 +1,6 @@
 # AgentOS Skills — Каталог скиллов для Claude Code
 
-Production-tested скиллы от команды EdgeLab — для кодинга, ресерча, контента, продаж и AI-генерации.
+Production-tested скиллы от команды EdgeLab: кодинг, ресерч, контент, воронки и продажи, соцсети, AI-генерация. 73 штуки.
 
 Этот репозиторий — публичная часть скиллов, которые мы используем каждый день в работе агентов Orgrimmar. Опубликовано как материал для учеников интенсива AgentOS.
 
@@ -22,16 +22,19 @@ Production-tested скиллы от команды EdgeLab — для кодин
 
 | Категория | Скиллов | Что внутри |
 |-----------|---------|------------|
-| **Ресерч** | 10 | perplexity, twitter, transcript, markdown-new, groq-voice, reel-radar, chat-archive, topic-monitor, yt-research, telegram-chip |
-| **Кодинг** | 9 | loop-coding, fast-loop-coding, mcp-builder, mcp-api-build, cross-review, dev-pipeline, server-doctor, agent-browser, senior-brainstorm |
-| **Контент** | 3 | content-engine, present, seo-tune |
-| **Соцсети** | 8 | instagram-superpower, carousel-instagram, reels, reels-analytics-for-brokers, youtube-producer, youtube-thumbnail, threads-content, twitter (создание) |
-| **AI-генерация** | 5 | codex-image, higgsfield-generate, higgsfield-soul-id, higgsfield-product-photoshoot, higgsfield-marketplace-cards |
-| **Сайты и приложения** | 2 | workshop, agentos-content |
+| **Ресерч** | 15 | perplexity, twitter, transcript, markdown-new, groq-voice, reel-radar, chat-archive, topic-monitor, yt-research, telegram-chip, hikerapi, niche-reels-research, reels-analyzer, youtube-analyzer, youtube-transcript |
+| **Кодинг** | 11 | loop-coding, fast-loop-coding, mcp-builder, mcp-api-build, cross-review, dev-pipeline, server-doctor, agent-browser, senior-brainstorm, ui-ux-pro-max, gws |
+| **Воронки и продажи** | 7 | funnel-skeleton, funnel-under-codeword, funnel-verify, funnel-teardown, chat-selling, product-unpack, polnaya-raspakovka-eksperta |
+| **Тексты и контент** | 6 | content-engine, present, seo-tune, seo-blog, selling-article, selling-longread |
+| **Соцсети** | 11 | instagram-superpower, carousel-instagram, reels, reels-analytics-for-brokers, youtube-producer, youtube-thumbnail, threads-content, twitter (создание), carousel-reskinner, reel-reskin, reels-montage |
+| **AI-генерация** | 8 | codex-image, codex-image-gen, visual-gen-howto, synthetic-avatar, higgsfield-generate, higgsfield-soul-id, higgsfield-product-photoshoot, higgsfield-marketplace-cards |
+| **Сайты и приложения** | 4 | workshop, agentos-content, client-knowledge-base-site, client-design-system |
 | **Визуализация** | 3 | excalidraw, miro-board, datawrapper |
-| **Системные и память** | 3 | learnings, memory-audit, agent-introspection |
+| **Системные и память** | 9 | learnings, memory-audit, agent-introspection, skill-creator, skill-finder, self-compiler, onboarding, gbrain-doctor, quick-reminders |
 
-Продажный блок (`crm-workflow`, `qualification`, `objection-handling`, `follow-up`) и копирайтинг лендингов пока не опубликованы — они в разделе [«Готовятся к публикации»](./CATALOG.md#готовятся-к-публикации). Роль `sales-agent` до их выхода собрана на research-скиллах, см. [`agents/sales-agent`](./agents/sales-agent/). Прогревы по Product Launch Formula лежат отдельным репозиторием: [qwwiwi/plf-walker](https://github.com/qwwiwi/plf-walker).
+Рядом со скиллами лежит `_text-rules` — общий свод правил живого русского текста, на него ссылаются скиллы контента и воронок.
+
+Продажный контур теперь открыт: воронка под кодовое слово со сборкой и проверкой, разбор чужой воронки, живая продажа в переписке, распаковка эксперта и сборка мини-продукта. Не опубликованы пока `landing-page-copywriter` и CRM-блок (`crm-workflow`, `qualification`, `objection-handling`, `follow-up`), см. раздел [«Готовятся к публикации»](./CATALOG.md#готовятся-к-публикации). Прогревы по Product Launch Formula лежат отдельным репозиторием: [qwwiwi/plf-walker](https://github.com/qwwiwi/plf-walker).
 
 ---
 
@@ -41,7 +44,7 @@ Production-tested скиллы от команды EdgeLab — для кодин
 
 ```bash
 cd ~/.claude/skills
-git clone https://github.com/qwwiwi/agentos-skills-public.git agentos
+git clone https://github.com/izmukovvladimir-cyber/agentos-skills-public.git agentos
 ```
 
 Чтобы установить отдельный скилл — скопируй нужную папку из `agentos/skills/<name>/` в `~/.claude/skills/`.
