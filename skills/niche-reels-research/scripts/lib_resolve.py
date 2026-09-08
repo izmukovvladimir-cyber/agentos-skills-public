@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """lib_resolve.py — устойчивый резолв username->uid для niche-reels.
 
-Проблема (06.07 выпал @theivansergeev, топ-поставщик каруселей → 7 вместо 10):
+Проблема (06.07 выпал @donor_seven, топ-поставщик каруселей → 7 вместо 10):
 HikerAPI /v1/user/by/username периодически отдаёт 404 UserNotFound —
-замаскированный IG rate-limit для ОТДЕЛЬНОГО живого аккаунта. theivansergeev
-резолвился 10 дней из 12, irinakesaeva 8 из 28 — резолв flaky, аккаунт выпадает.
+замаскированный IG rate-limit для ОТДЕЛЬНОГО живого аккаунта. donor_seven
+резолвился 10 дней из 12, donor_eight 8 из 28 — резолв flaky, аккаунт выпадает.
 
 Фикс: персистентный кэш uid (uid у аккаунта неизменен) — cache/uid_cache.json.
   1. live /v1/user/by/username → success → кэшируем {uid, followers, verified, ts}.

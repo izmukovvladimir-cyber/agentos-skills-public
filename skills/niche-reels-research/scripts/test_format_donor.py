@@ -21,7 +21,7 @@ CHECKER = HERE / "hook_fidelity_check.py"
 SENDER = HERE / "send_morning_digest.py"
 
 PASS = FAIL = 0
-# хук донора: чужие марки и диагноз, ровно случай @pediatr_nauruzova
+# хук донора: чужие марки и диагноз, ровно случай @donor_nine
 DONOR_SPEECH = ("Несичка и Урьяш Атодерм это интенсив бальзам при атопическом дерматите "
                 "и его надо мазать каждый день")
 
@@ -48,7 +48,7 @@ def check(name: str, cond: bool, got=None) -> None:
 
 
 def pack(**over) -> dict:
-    p = {"author_username": "pediatr_nauruzova", "type": "reel",
+    p = {"author_username": "donor_nine", "type": "reel",
          "url": "https://www.instagram.com/reel/DcHBjmsMRm-/",
          "editor_brief": "обычное ТЗ монтажу",
          "teleprompter": "Своя речь на позициях клиента, хук по конструкции донора",
@@ -198,7 +198,7 @@ def main() -> int:
                 self.returncode, self.stdout, self.stderr = rc_, out_, ""
 
         saved = SND.subprocess.run
-        donor_line = (f"{HFC.DONOR_SKIP_TOKEN} pack_00.json (@pediatr_nauruzova): "
+        donor_line = (f"{HFC.DONOR_SKIP_TOKEN} pack_00.json (@donor_nine): "
                       f"{HFC.FORMAT_DONOR_MARK} — хук оригинала не переносится")
         try:
             SND.subprocess.run = lambda *a, **kw: FakeRun(0, donor_line + "\n")
