@@ -24,7 +24,7 @@ HTML руками НЕ собирать, CSS/шаблон НЕ менять, с�
 
 ```json
 {
-  "author_username": "batischv",
+  "author_username": "donor_three",
   "topic": "Суть темы одной фразой (кодворд ПРОБНЫЙ)",
   "code": "DaYMB7Ds9HB",            // shortcode; желателен (нужен mark_shown/protected)
   "url": "https://www.instagram.com/reel/DaYMB7Ds9HB/",
@@ -74,7 +74,7 @@ HTML руками НЕ собирать, CSS/шаблон НЕ менять, с�
 ```json
 {
   "type": "carousel",
-  "author_username": "dashi_agent",
+  "author_username": "donor_six",
   "topic": "Суть карусели (кодворд УРОВНИ)",
   "url": "https://www.instagram.com/p/DagHC9-Dc82/",
   "card": "МЕТРИКИ ОРИГИНАЛА (@handle): ком:ментов=8, лайков=23, возраст=..., score=35.\nВЕРДИКТ: адаптировать | уникализировать | референс. Раскладка/визуал, тема, кодворд.\nПОЧЕМУ ПОКАЗЫВАЮ: 1-2 предложения.\nРЕФЕРЕНС: <url>",

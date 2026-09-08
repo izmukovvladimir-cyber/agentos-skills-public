@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Handwritten "blue pen on cream paper" carousel renderer (Chrome headless, no PIL).
 
-Mirrors the create_daniel2 / theivansergeev viral notebook format but PRETTIER and
+Mirrors the donor_ten / donor_seven viral notebook format but PRETTIER and
 READABLE per the operator 2026-07-04: same handwritten vibe (Caveat, deep-blue ink, warm
 cream paper, faint ruled lines) rendered LARGE and clean so nothing is cramped or thin.
 

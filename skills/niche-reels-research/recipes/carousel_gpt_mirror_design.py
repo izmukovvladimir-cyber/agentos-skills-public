@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """v3: дизайн ПОД ОРИГИНАЛ каждого + ПОЛНЫЙ текст 1:1 (владелец голос 8963).
-c01 theivansergeev = премиум-тетрадь/планер (кремовая бумага, пружина), 4 промпта ЦЕЛИКОМ.
-c02 dashi_agent = тёмный продуктовый дек (Claude badge, оранж 'Результат:'), задачи ЦЕЛИКОМ.
+c01 donor_seven = премиум-тетрадь/планер (кремовая бумага, пружина), 4 промпта ЦЕЛИКОМ.
+c02 donor_six = тёмный продуктовый дек (Claude badge, оранж 'Результат:'), задачи ЦЕЛИКОМ.
 gpt-image-2, текст запекает модель (проверено: 70 слов рендерит чисто). Лицо на обложках.
 
 ДИЗАЙН-КАНОН РЕКРЕЙТА (HARD, владелец голос  — дефолты для любого рекрейта,
@@ -62,7 +62,7 @@ def dark_task(title, body):
             f'Below this exact text, white with the word "Результат:" in orange: «{body}» Every Cyrillic word spelled exactly.')
 
 
-# ===== CAROUSEL 1: theivansergeev — премиум-тетрадь, полные промпты =====
+# ===== CAROUSEL 1: donor_seven — премиум-тетрадь, полные промпты =====
 C1 = BASE / "carousel_c01_system_20260618" / "gpt_v3"; C1.mkdir(parents=True, exist_ok=True)
 gen(C1 / "00_cover.png", FACE +
     "Premium warm editorial portrait of the man at a stylish desk with a cream notebook and coffee, soft warm light, "
@@ -92,7 +92,7 @@ gen(C1 / "05_final.png", NOTE +
     '"Четыре промпта собирают контент под твою нишу." Below a call-to-action "Забери все промпты, напиши «статья» '
     'в комментариях" with «статья» underlined in orange. All Cyrillic spelled exactly.')
 
-# ===== CAROUSEL 2: dashi_agent — тёмный дек, задачи целиком =====
+# ===== CAROUSEL 2: donor_six — тёмный дек, задачи целиком =====
 C2 = BASE / "carousel_c02_claude_20260618" / "gpt_v3"; C2.mkdir(parents=True, exist_ok=True)
 gen(C2 / "00_cover.png", FACE + DARK.replace("All Cyrillic", "Man positioned on the left, face clean at top. "
     "Big white headline on the dark right \"ЛАЙФХАКИ НЕДЕЛИ\", orange subline \"с нейросетью Claude\". A small Claude badge top. "

@@ -9,7 +9,7 @@ Spec slide types:
   {"type":"cover","kicker":"...","title":"...","accent":"слово","subtitle":"..."}
   {"type":"cover_photo","bg":"hero.png","kicker":"...","title":"...","accent":"...","subtitle":"..."}
   {"type":"story","step":"01","heading":"...","accent":"слово","body":"..."}
-  {"type":"case","niche":"🥊 Бокс","name":"Андрей Колотнев","before":"8 322","after":"24 100","note":"×3","quote":"..."}
+  {"type":"case","niche":"🥊 Бокс","name":"Андрей Иванов","before":"8 322","after":"24 100","note":"×3","quote":"..."}
   {"type":"cta","title":"...","accent":"...","text":"...","button":"..."}
 Usage: stories_neon_render.py spec.json out_dir/ [--scale 2]
 """

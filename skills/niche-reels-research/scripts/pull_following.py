@@ -14,12 +14,12 @@ OUT_DIR = Path("/tmp/expand_pool")
 OUT_DIR.mkdir(exist_ok=True)
 
 USERNAMES = [
-    "liza.tkachyk",
-    "ilia.paliy",
-    "batischv",
-    "ikatevibe",
-    "burmistrov_ai",
-    "dashi_agent",
+    "donor_one",
+    "donor_two",
+    "donor_three",
+    "donor_four",
+    "donor_five",
+    "donor_six",
 ]
 
 

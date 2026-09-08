@@ -6,7 +6,7 @@ from pathlib import Path
 from collections import defaultdict
 
 POOL = Path("/tmp/expand_pool")
-ANCHORS = ["liza.tkachyk", "ilia.paliy", "batischv", "ikatevibe", "burmistrov_ai", "dashi_agent"]
+ANCHORS = ["donor_one", "donor_two", "donor_three", "donor_four", "donor_five", "donor_six"]
 
 # Ниша: AI / нейро / IG-рост / маркетинг / Reels / контент / promo
 NICHE_KEYWORDS = [
