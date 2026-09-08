@@ -105,7 +105,7 @@ Playwright у тебя уже установлен, `agent-browser` найдёт
 ## Установка скилла
 
 ```bash
-npx skills add github.com/qwwiwi/agentos-skills-public --skill agent-browser
+npx skills add github.com/izmukovvladimir-cyber/agentos-skills-public --skill agent-browser
 ```
 
 Или скопировать папку в `~/.claude/skills/`.

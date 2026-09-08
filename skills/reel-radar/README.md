@@ -11,7 +11,7 @@
 ## Установка
 
 ```bash
-npx skills add github.com/qwwiwi/agentos-skills-public --skill reel-radar
+npx skills add github.com/izmukovvladimir-cyber/agentos-skills-public --skill reel-radar
 ```
 
 Или скопировать папку в `~/.claude/skills/`.

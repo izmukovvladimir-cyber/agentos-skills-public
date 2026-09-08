@@ -82,9 +82,9 @@ def load_sender(root: Path):
     return m
 
 
-REEL = {"code": "AAA111", "username": "boshnikov", "protected": True,
+REEL = {"code": "AAA111", "username": "primer_avtor_a", "protected": True,
         "url": "https://instagram.com/reel/AAA111/"}
-CAR = {"code": "CCC222", "username": "vvedenskaya", "protected": True,
+CAR = {"code": "CCC222", "username": "primer_avtor_b", "protected": True,
        "url": "https://instagram.com/p/CCC222/"}
 
 
@@ -121,7 +121,7 @@ def s2_protected_codes():
     check("файла нет и он не обязателен — пусто",
           m._protected_codes(root / "pool" / "_carousels_scored.json", required=False) == {})
     check("файл есть — коды прочитаны",
-          m._protected_codes(root / "pool" / "_scored.json") == {"AAA111": "boshnikov"})
+          m._protected_codes(root / "pool" / "_scored.json") == {"AAA111": "primer_avtor_a"})
     root2 = sandbox(limits={"carousels_enabled": False}, car_scored="{битый")
     m2 = load_sender(root2)
     check("нечитаемый файл — сбой даже при выключенных каруселях",
@@ -155,12 +155,12 @@ def s3_backstop():
     m = load_sender(sandbox(limits={"carousels_enabled": False}, scored=[REEL]))
     res = m.protected_missing_warn([{"code": "ZZZ999", "url": ""}])
     check("выключено: рилсовый бэкстоп жив", "protected-виралка НЕ вошла" in res.text, res.text[:90])
-    check("выключено: назван пропавший рилс", "boshnikov" in res.text, res.text[:120])
+    check("выключено: назван пропавший рилс", "primer_avtor_a" in res.text, res.text[:120])
     # выключено, но файл каруселей ЕСТЬ — читаем его, выключатель не прячет данные
     m = load_sender(sandbox(limits={"carousels_enabled": False}, scored=[REEL], car_scored=[CAR]))
     res = m.protected_missing_warn([pack])
     check("выключено: существующий файл каруселей всё равно прочитан",
-          "vvedenskaya" in res.text, res.text[:120])
+          "primer_avtor_b" in res.text, res.text[:120])
     # выключено, файл каруселей битый — сбой называется вслух
     m = load_sender(sandbox(limits={"carousels_enabled": False}, scored=[REEL], car_scored="{битый"))
     res = m.protected_missing_warn([pack])
@@ -185,7 +185,7 @@ def _run_sender(root: Path) -> str:
 
 def s4_end_to_end():
     pack = {"code": "AAA111", "url": "https://instagram.com/reel/AAA111/",
-            "kind": "РИЛС", "username": "boshnikov"}
+            "kind": "РИЛС", "username": "primer_avtor_a"}
     out_off = _run_sender(sandbox(limits={"carousels_enabled": False, "carousel_min": 3},
                                   scored=[REEL], packs=[pack]))
     check("сквозной выключено: нет требования добрать карусели",

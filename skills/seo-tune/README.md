@@ -13,7 +13,7 @@ It tunes a site that already exists; it doesn't build one from scratch.
 One command (recommended):
 
 ```bash
-npx skills add github.com/qwwiwi/agentos-skills-public --skill seo-tune
+npx skills add github.com/izmukovvladimir-cyber/agentos-skills-public --skill seo-tune
 ```
 
 Add `-g` to install it globally for every project.
