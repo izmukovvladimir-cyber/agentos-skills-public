@@ -34,7 +34,7 @@ Production-tested скиллы от команды EdgeLab: кодинг, рес
 
 Рядом со скиллами лежит `_text-rules` — общий свод правил живого русского текста, на него ссылаются скиллы контента и воронок.
 
-Продажный контур теперь открыт: воронка под кодовое слово со сборкой и проверкой, разбор чужой воронки, живая продажа в переписке, распаковка эксперта и сборка мини-продукта. Не опубликованы пока `landing-page-copywriter` и CRM-блок (`crm-workflow`, `qualification`, `objection-handling`, `follow-up`), см. раздел [«Готовятся к публикации»](./CATALOG.md#готовятся-к-публикации). Прогревы по Product Launch Formula лежат отдельным репозиторием: [qwwiwi/plf-walker](https://github.com/qwwiwi/plf-walker).
+Продажный контур теперь открыт: воронка под кодовое слово со сборкой и проверкой, разбор чужой воронки, живая продажа в переписке, распаковка эксперта и сборка мини-продукта. Не опубликованы пока `landing-page-copywriter` и CRM-блок (`crm-workflow`, `qualification`, `objection-handling`, `follow-up`), см. раздел [«Готовятся к публикации»](./CATALOG.md#готовятся-к-публикации). Прогревы по Product Launch Formula лежат отдельным репозиторием: [izmukovvladimir-cyber/plf-walker](https://github.com/izmukovvladimir-cyber/plf-walker).
 
 ---
 
@@ -81,7 +81,7 @@ agentos-skills-public/
 
 | Источник | Описание | Установка |
 |----------|----------|-----------|
-| [obra/superpowers](https://github.com/obra/superpowers) | Универсальные мета-скиллы: TDD, debugging, plan-driven development | `git clone https://github.com/obra/superpowers.git ~/.claude/skills/superpowers` |
+| [izmukovvladimir-cyber/superpowers](https://github.com/izmukovvladimir-cyber/superpowers) | Универсальные мета-скиллы: TDD, debugging, plan-driven development | `git clone https://github.com/izmukovvladimir-cyber/superpowers.git ~/.claude/skills/superpowers` |
 | [anthropics/skills](https://github.com/anthropics/skills) | Официальные скиллы Anthropic (skill-creator, cua-driver) | `git clone https://github.com/anthropics/skills.git ~/.claude/skills/anthropics` |
 | [supabase/agent-skills](https://github.com/supabase/agent-skills) | Best practices для Supabase + Postgres | `git clone https://github.com/supabase/agent-skills.git ~/.claude/skills/supabase` |
 
