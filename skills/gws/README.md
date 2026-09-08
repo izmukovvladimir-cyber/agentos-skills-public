@@ -5,7 +5,7 @@ OpenClaw skill: Google Workspace (Gmail, Calendar, Drive, Sheets, Docs, Tasks)
 ## Установка
 
 ```bash
-git clone https://github.com/qwwiwi/gws.git
+git clone https://github.com/izmukovvladimir-cyber/gws.git
 openclaw skill install ./skills/gws
 ```
 

@@ -26,7 +26,7 @@ Framework: pytest + pytest-asyncio.
 | E2E | `@pytest.mark.e2e` | `tests/e2e/test_*.py` |
 | Security | `@pytest.mark.security` | `tests/security/test_*.py` |
 
-Reference style: `qwwiwi/architecture-brain-tests` (760 tests, structured under `tests/` mirroring source).
+Reference style: `izmukovvladimir-cyber/architecture-brain-tests` (760 tests, structured under `tests/` mirroring source).
 
 Run:
 ```bash

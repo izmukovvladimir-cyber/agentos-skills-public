@@ -34,7 +34,7 @@ Provides decision frameworks, stage-aware stack recommendations, architecture pa
 ## Install
 
 ```bash
-git clone https://github.com/qwwiwi/senior-brainstorm-skill ~/.claude/skills/senior-brainstorm
+git clone https://github.com/izmukovvladimir-cyber/senior-brainstorm-skill ~/.claude/skills/senior-brainstorm
 ```
 
 Or use `skill-installer` if you have it configured.

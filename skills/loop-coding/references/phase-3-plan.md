@@ -39,7 +39,7 @@ Be exhaustive — Opus subagents will execute this without re-planning."
 
 ```
 Given PLAN.md (Codex-authored), generate test skeletons under tests/.
-Style reference: qwwiwi/architecture-brain-tests.
+Style reference: izmukovvladimir-cyber/architecture-brain-tests.
 For each public interface in PLAN.md Part 1 (Architecture):
 - Unit test skeleton (happy path + edge cases) — marked @pytest.mark.skip for now
 - Integration test skeleton for module boundaries
