@@ -1,0 +1,11 @@
+# niche-reels cron entries — установить через `crontab -e` под owner.
+# Время в crontab — серверное (UTC). VPS: NYC1, UTC.
+# МСК = UTC+3, поэтому 06:00 МСК = 03:00 UTC, 09:00 МСК = 06:00 UTC.
+#
+# При смене tz / переезде сервера — пересчитать!
+
+# Daily morning auto (pull + score + thumbs + notify <agent>) — пн-пт 06:00 МСК
+0 3 * * 1-5 ~/.claude/skills/niche-reels-research/cron/daily_morning_auto.sh
+
+# Weekly archive check — воскресенье 09:00 МСК
+0 6 * * 0 ~/.claude/skills/niche-reels-research/cron/weekly_check.sh

@@ -55,14 +55,25 @@
 7. Phase 6 Fix-loop — максимум 3 итерации, иначе эскалация принцу
 8. Phase 7 Ship — git push автоматически, staging автономно, production только с явным «да, на prod»
 
+### Скиллы, сайты и интерфейсы (новое)
+
+- [`skill-creator`](../../skills/skill-creator/) — создание и доводка своих скиллов
+- [`skill-finder`](../../skills/skill-finder/) — поиск готового скилла под задачу
+- [`self-compiler`](../../skills/self-compiler/) — переписывает правила агента по накопленным урокам
+- [`ui-ux-pro-max`](../../skills/ui-ux-pro-max/) — база знаний по UI и UX под 20 стеков
+- [`client-design-system`](../../skills/client-design-system/) — дизайн-система клиента в один файл
+- [`client-knowledge-base-site`](../../skills/client-knowledge-base-site/) — база знаний эксперта на своём домене под ключ
+- [`gws`](../../skills/gws/) — Google Workspace одной командой
+
 ## Установка
 
 ```bash
 cd ~/.claude/skills
-git clone https://github.com/qwwiwi/agentos-skills-public.git agentos
+git clone https://github.com/izmukovvladimir-cyber/agentos-skills-public.git agentos
 for skill in loop-coding fast-loop-coding mcp-builder mcp-api-build cross-review \
   dev-pipeline server-doctor learnings memory-audit agent-introspection \
-  perplexity-research markdown-new; do
+  perplexity-research markdown-new \
+  skill-creator skill-finder self-compiler ui-ux-pro-max client-design-system client-knowledge-base-site gws; do
   cp -r agentos/skills/$skill ./
 done
 ```

@@ -20,6 +20,11 @@ Production-tested скиллы для Claude Code. Здесь — sanitize-ве�
 | `topic-monitor` | Регулярный мониторинг темы | available |
 | `yt-research` | YouTube-ресерч: поиск по нише, velocity, скан каналов-конкурентов, транскрипты | available |
 | `reel-radar` | Контент-разведка Instagram под съёмку: подписки эталонного аккаунта, залетевшие рилсы за неделю, транскрипты, дашборд с 25 референсами и 15 ТЗ на съёмку | available |
+| `hikerapi` | Данные Instagram через HikerAPI: профили, посты, сторис, ком:ментарии, подписчики, хэштеги | available |
+| `niche-reels-research` | Ежедневный конвейер разведки рилсов в нише: сбор, скоринг, дедуп, транскрипты, готовая подборка кандидатов на съёмку | available |
+| `reels-analyzer` | Разбор виральности аккаунта в Instagram: топ рилсов, скачивание, транскрипты, разбор хуков и структуры | available |
+| `youtube-analyzer` | То же по каналу YouTube (Shorts и длинные), через yt-dlp без ключа API | available |
+| `youtube-transcript` | Транскрипт ролика YouTube по ссылке через TranscriptAPI | available |
 
 ## Кодинг и разработка
 
@@ -34,6 +39,8 @@ Production-tested скиллы для Claude Code. Здесь — sanitize-ве�
 | `dev-pipeline` | Оркестрация разработки на сервере | available |
 | `server-doctor` | Аудит и починка Linux/macOS | available |
 | `agent-browser` | Управление настоящим браузером из агента: открыть, кликнуть, заполнить форму, скриншот, вытащить данные, проверить веб-приложение. Обёртка над CLI agent-browser (vercel-labs, Apache-2.0) | available |
+| `ui-ux-pro-max` | База знаний по UI и UX: 84 стиля, 192 палитры, 74 шрифтовые пары, правила под 20 стеков | available |
+| `gws` | Google Workspace одной командой: почта, календарь, диск, документы | available |
 
 ## Контент и копирайтинг
 
@@ -42,6 +49,10 @@ Production-tested скиллы для Claude Code. Здесь — sanitize-ве�
 | `content-engine` | Tone-of-voice aware двигатель контента | available |
 | `present` | HTML-презентации в стиле EdgeLab | available |
 | `seo-tune` | SEO/AEO/GEO-аудит и настройка существующего сайта: robots, sitemap, canonical, meta/OG, JSON-LD, llms.txt, IndexNow — под твой домен и ключи | available |
+| `seo-blog` | Поисковый блог от подбора темы по спросу до индексации и замера органики | available |
+| `selling-article` | Продающая статья-лонгрид из оффера по канону директ-маркетинга, 24 или 18 блоков | available |
+| `selling-longread` | Сборка продающей страницы-лонгрида из текста клиента со скриншотами приёмки | available |
+| `_text-rules` | Общий свод правил живого русского текста, подключается скиллами контента и воронок | available |
 
 ## Соцсети — Instagram, Reels, YouTube, Threads
 
@@ -54,6 +65,9 @@ Production-tested скиллы для Claude Code. Здесь — sanitize-ве�
 | `youtube-thumbnail` | YouTube-обложки 1920×1080: лицо из кадров + gpt-image + наложение текста/шрифта | available |
 | `threads-content` | Контент для Threads | available |
 | `reels-analytics-for-brokers` | Радар восходящих офферов в Instagram: пул конкурентов, ранжирование рилсов по всплеску, разбор хуков, динамика между срезами. Образец под свою нишу | available |
+| `carousel-reskinner` | Сборка постов и каруселей по донору: фактура со слайдов, рерайт, рендер, приёмка контактным листом | available |
+| `reel-reskin` | Переклейка чужого вирального рилса под свой аккаунт: телесуфлёр рерайтом и ТЗ монтажу | available |
+| `reels-montage` | Монтаж вертикальных роликов кодом: караоке-субтитры по речи, карточки-хуки, врезки, 23 стиля | available |
 
 ## AI-генерация изображений и видео
 
@@ -64,6 +78,9 @@ Production-tested скиллы для Claude Code. Здесь — sanitize-ве�
 | `higgsfield-soul-id` | Свой персонаж через Soul ID | available |
 | `higgsfield-product-photoshoot` | Продуктовая съёмка | available |
 | `higgsfield-marketplace-cards` | Карточки для маркетплейсов | available |
+| `codex-image-gen` | Генерация картинок через gpt-image на подписке ChatGPT или Codex, без ключа API | available |
+| `visual-gen-howto` | Как выбирать движок под задачу: бесплатная генерация, точное лицо, премиум-видео | available |
+| `synthetic-avatar` | Стандарт по синтезированному лицу и голосу реального человека: где можно, где нельзя, как размечать | available |
 
 ## Сайты и приложения
 
@@ -71,6 +88,8 @@ Production-tested скиллы для Claude Code. Здесь — sanitize-ве�
 |-------|------------|--------|
 | `workshop` | Универсальный скилл для воркшопов | available |
 | `agentos-content` | Контент для платформ типа AgentOS | available |
+| `client-knowledge-base-site` | База знаний эксперта на своём домене под ключ: интервью, сборка, DNS, выкладка | available |
+| `client-design-system` | Дизайн-система клиента в один файл, читается перед любой генерацией визуала | available |
 
 ## Визуализация
 
@@ -89,6 +108,24 @@ Production-tested скиллы для Claude Code. Здесь — sanitize-ве�
 | `agent-introspection` | Самодиагностика агента | available |
 
 ---
+| `skill-creator` | Создание и доводка своих скиллов по шагам, замер качества | available |
+| `skill-finder` | Поиск и оценка готовых скиллов под задачу | available |
+| `self-compiler` | Переписывает CLAUDE.md, rules.md и USER.md агента по накопленным урокам и правкам владельца | available |
+| `onboarding` | Мастер первой настройки свежего агента под владельца | available |
+| `gbrain-doctor` | Сквозная диагностика общей памяти агента: связь, личность, recall, хуки, вебхуки, безопасность | available |
+| `quick-reminders` | Разовые напоминания через cron: поставить, посмотреть, снять | available |
+
+## Воронки и продажи
+
+| Скилл | Что делает | Статус |
+|-------|------------|--------|
+| `funnel-skeleton` | Пустой скелет воронки под кодовое слово: подписка, магнит, мост, развилка, ветки, продажа | available |
+| `funnel-under-codeword` | Собирает полную воронку под кодовое слово вместе с лид-магнитом одной задачей | available |
+| `funnel-verify` | Проверка живой воронки одной командой: Telegram, Instagram, магнит, платёжная страница | available |
+| `funnel-teardown` | Разбор чужой воронки: живой проход бота с таймингом касаний и внешние метрики трафика | available |
+| `chat-selling` | Продажа в переписке после выдачи магнита: квалификация, презентация, работа с отказом | available |
+| `product-unpack` | Конвейер сборки мини-продукта: от ниши до упакованного трипваера | available |
+| `polnaya-raspakovka-eksperta` | Полная распаковка эксперта за семь шагов: продукт, ядро, конкуренты, ЦА, оффер, карта ценности | available |
 
 ## Готовятся к публикации
 
@@ -96,7 +133,7 @@ Production-tested скиллы для Claude Code. Здесь — sanitize-ве�
 
 - `landing-page-copywriter` — копирайтинг лендингов
 - `plf-walker` — Product Launch Formula прогрев
-- `crm-workflow`, `qualification`, `objection-handling`, `follow-up` — продажный блок
+- `crm-workflow`, `qualification`, `objection-handling`, `follow-up` — CRM-блок
 
 ---
 
@@ -112,7 +149,7 @@ Production-tested скиллы для Claude Code. Здесь — sanitize-ве�
 
 ```bash
 cd ~/.claude/skills
-git clone https://github.com/qwwiwi/agentos-skills-public.git agentos
+git clone https://github.com/izmukovvladimir-cyber/agentos-skills-public.git agentos
 ```
 
 ### Отдельный скилл

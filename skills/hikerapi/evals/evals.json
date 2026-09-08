@@ -1,0 +1,45 @@
+{
+  "skill_name": "hikerapi",
+  "evals": [
+    {
+      "id": 1,
+      "name": "profile-lookup-by-handle",
+      "prompt": "Посмотри инстаграм @your_account -- сколько подписчиков, сколько постов, биография. Если возможно, дай ссылку на сайт из bio.",
+      "expected_output": "JSON или короткая сводка с полями: full_name, follower_count, media_count, biography, external_url. Должен использовать /v2/user/by/username как первую попытку, без лишних вызовов.",
+      "files": [],
+      "assertions": [
+        "Calls /v2/user/by/username (or hiker.py user) with username='@your_account'",
+        "Reports follower_count and media_count from the response",
+        "Does NOT make extra calls to /v1/user/about or other endpoints if v2 already returned the fields",
+        "Stays read-only, never tries to post or message"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "reels-top-by-views",
+      "prompt": "Достань последние 30 постов у @nasa, отфильтруй только reels (media_type=2) и покажи топ-5 по play_count с подписями.",
+      "expected_output": "Цепочка: user_by_username -> user_medias (paginate до 30) -> filter media_type==2 -> sort by play_count desc -> top 5. Финальный вывод: code, play_count, caption (первые 100 символов), permalink.",
+      "files": [],
+      "assertions": [
+        "Resolves user_id via /v2/user/by/username before calling medias",
+        "Uses /gql/user/medias (preferred) with paginate to collect ~30 items",
+        "Correctly filters media_type==2 for reels/clips",
+        "Sorts by play_count and returns 5 entries",
+        "Persists intermediate JSON to /tmp before printing summary (cost hygiene rule)"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "hashtag-top-research",
+      "prompt": "Сделай ресёрч по хештегу #нейросети -- что в топе сейчас, у каких аккаунтов больше всего лайков. Достаточно первой страницы.",
+      "expected_output": "Вызов /v2/hashtag/medias/top один раз, парсинг items, вывод: автор (username), like_count, caption excerpt, permalink. Без пагинации.",
+      "files": [],
+      "assertions": [
+        "Calls /v2/hashtag/medias/top with name='нейросети' (URL-encoded transparently)",
+        "Does not paginate (only first page requested)",
+        "Extracts and reports username + like_count for each top result",
+        "Reports HikerAPI balance only if proactively asked or the run could exceed ~50 calls"
+      ]
+    }
+  ]
+}

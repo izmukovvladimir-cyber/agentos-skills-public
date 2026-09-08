@@ -57,7 +57,7 @@
 
 ```bash
 cd ~/.claude/skills
-git clone https://github.com/qwwiwi/agentos-skills-public.git agentos
+git clone https://github.com/izmukovvladimir-cyber/agentos-skills-public.git agentos
 for skill in cross-review mcp-api-build mcp-builder perplexity-research \
   learnings memory-audit present; do
   cp -r agentos/skills/$skill ./

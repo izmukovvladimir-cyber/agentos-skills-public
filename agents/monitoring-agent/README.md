@@ -45,13 +45,19 @@
 4. → `present` собирает daily digest в HTML
 5. Отправляет принцу в Telegram до 9:00
 
+### Диагностика и напоминания (новое)
+
+- [`gbrain-doctor`](../../skills/gbrain-doctor/) — сквозная диагностика общей памяти агента
+- [`quick-reminders`](../../skills/quick-reminders/) — разовые напоминания через cron
+
 ## Установка
 
 ```bash
 cd ~/.claude/skills
-git clone https://github.com/qwwiwi/agentos-skills-public.git agentos
+git clone https://github.com/izmukovvladimir-cyber/agentos-skills-public.git agentos
 for skill in chat-archive topic-monitor perplexity-research memory-audit \
-  learnings agent-introspection transcript groq-voice markdown-new present; do
+  learnings agent-introspection transcript groq-voice markdown-new present \
+  gbrain-doctor quick-reminders; do
   cp -r agentos/skills/$skill ./
 done
 ```

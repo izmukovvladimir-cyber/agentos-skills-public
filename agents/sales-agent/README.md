@@ -38,12 +38,23 @@
 5. Follow-up → `content-engine` пишет персональное письмо
 6. Если нужна презентация → `present` собирает HTML по нашему фирстилю
 
+### Воронки и продажи (новое)
+
+- [`funnel-skeleton`](../../skills/funnel-skeleton/) — скелет воронки под кодовое слово
+- [`funnel-under-codeword`](../../skills/funnel-under-codeword/) — полная сборка воронки вместе с лид-магнитом
+- [`funnel-verify`](../../skills/funnel-verify/) — проверка живой воронки одной командой
+- [`funnel-teardown`](../../skills/funnel-teardown/) — разбор чужой воронки с таймингом касаний
+- [`chat-selling`](../../skills/chat-selling/) — продажа в переписке после выдачи магнита
+- [`product-unpack`](../../skills/product-unpack/) — сборка мини-продукта от ниши до упаковки
+- [`polnaya-raspakovka-eksperta`](../../skills/polnaya-raspakovka-eksperta/) — полная распаковка эксперта за семь шагов
+
 ## Установка
 
 ```bash
 cd ~/.claude/skills
-git clone https://github.com/qwwiwi/agentos-skills-public.git agentos
-for skill in perplexity-research twitter markdown-new transcript chat-archive present content-engine; do
+git clone https://github.com/izmukovvladimir-cyber/agentos-skills-public.git agentos
+for skill in perplexity-research twitter markdown-new transcript chat-archive present content-engine \
+  funnel-skeleton funnel-under-codeword funnel-verify funnel-teardown chat-selling product-unpack polnaya-raspakovka-eksperta; do
   cp -r agentos/skills/$skill ./
 done
 ```

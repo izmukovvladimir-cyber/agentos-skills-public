@@ -1,0 +1,212 @@
+{
+ "_comment": "Машинный индекс стилей. prompt — строка, которая дословно подставляется в промпт сториборда и в промпт монтажа. background — описание фона за спикером (применять только по просьбе человека). Цвета в палитре даны для справки: в промпт hex не пишется никогда.",
+ "styles": [
+  {
+   "id": 1,
+   "slug": "kinetik",
+   "name": "кинетик",
+   "whenToUse": "универсальный дефолт; любая тема, где важна читаемость на телефоне",
+   "palette": "чёрный #000000 + оранжевый #F5A623",
+   "prompt": "pure jet black background, bold orange accents, bold condensed sans, kinetic typography with overshoot punches, no gradients, no glass, no texture",
+   "background": ""
+  },
+  {
+   "id": 2,
+   "slug": "neon",
+   "name": "неон-тех",
+   "whenToUse": "технологии, данные, сервисы, всё «под капотом»",
+   "palette": "тёмно-синий #0A0F1E + циан #38E1FF, вторичная магента",
+   "prompt": "deep navy background, neon cyan glow accents, HUD frames and corner brackets, terminal aesthetics, subtle scanlines",
+   "background": "серверная в холодном синем свете"
+  },
+  {
+   "id": 3,
+   "slug": "minimal",
+   "name": "минимал-люкс",
+   "whenToUse": "спокойный экспертный разговор, дорогая услуга, консалтинг",
+   "palette": "белый #FAFAF8 + чёрная типографика + один алый #E0362C",
+   "prompt": "clean white background, huge black type, single red accent, generous whitespace, thin rules, luxury minimal",
+   "background": "светлая студия с белой стеной"
+  },
+  {
+   "id": 4,
+   "slug": "editorial",
+   "name": "editorial-бумага",
+   "whenToUse": "разборы, гайды, длинные объяснения; сочетается с сайтом гайдов",
+   "palette": "крем #F7F2E8 + терракота #BE4A24",
+   "prompt": "warm cream paper texture, terracotta accents, elegant serif display type, editorial magazine look",
+   "background": "тёплый кабинет с книжной полкой"
+  },
+  {
+   "id": 5,
+   "slug": "telegram",
+   "name": "телеграм-синий",
+   "whenToUse": "переписки, боты, воронки, всё про сообщения",
+   "palette": "тёмный #0e1621 + телеграм-голубой #2AABEE",
+   "prompt": "dark telegram-style UI, bright blue accents, chat bubble mockups, rounded pills",
+   "background": ""
+  },
+  {
+   "id": 6,
+   "slug": "collage",
+   "name": "коллаж-газета",
+   "whenToUse": "разоблачения, «а как на самом деле», подборки фактов",
+   "palette": "газетная бумага + чёрный + один красный",
+   "prompt": "newspaper collage, halftone black and white cutouts, red rubber stamps and marker strokes, torn paper, big clean cut-out block letters, one typeface, perfectly readable",
+   "background": "стена, оклеенная газетами"
+  },
+  {
+   "id": 7,
+   "slug": "premium",
+   "name": "кинетик-премиум",
+   "whenToUse": "деньги, статус, дорогие продукты",
+   "palette": "обсидиан #0B0B0C + шампань-золото + крем",
+   "prompt": "obsidian black background, champagne gold and cream accents, refined serif display, film grain, shallow depth of field, luxury cinematic",
+   "background": "тёмный интерьер с тёплым контровым светом"
+  },
+  {
+   "id": 8,
+   "slug": "3d",
+   "name": "3D-моушн",
+   "whenToUse": "продукт, интерфейс, всё что хочется «покрутить»",
+   "palette": "индиго → фиолетовый градиент + electric blue",
+   "prompt": "indigo-violet gradient, glossy 3D extruded chrome letters, electric-blue edge glow, floating glass cards, parallax depth",
+   "background": "перспективная сетка в фиолетовом свете"
+  },
+  {
+   "id": 9,
+   "slug": "meme",
+   "name": "стикер-мем",
+   "whenToUse": "молодёжная аудитория, дерзкий тон, короткие хуки",
+   "palette": "электрик-блю + кислотные розовый, жёлтый, циан, лайм",
+   "prompt": "loud sticker-meme look, die-cut stickers with thick white borders, cartoon emoji stickers, marker doodles, chunky rounded font, halftone background",
+   "background": "яркая стена в халтон-точку"
+  },
+  {
+   "id": 10,
+   "slug": "claude",
+   "name": "Claude/Anthropic",
+   "whenToUse": "темы про нейросети и агентов, когда нужен тёплый человечный тон",
+   "palette": "кремовая бумага #F0EEE6 + коралл #D97757 + charcoal",
+   "prompt": "cream paper background, coral accent, charcoal text, sans plus refined serif, coral twelve-point sparkle motif, soft rounded UI, chat interface mockup",
+   "background": "светлый стол с ноутбуком"
+  },
+  {
+   "id": 11,
+   "slug": "terminal",
+   "name": "терминал-pro",
+   "whenToUse": "аналитика, цифры, «профессиональный инструмент»",
+   "palette": "чистый чёрный + фосфорно-зелёный + янтарные алерты",
+   "prompt": "pure black, translucent frosted glass panels, phosphor green monospace data text, amber alerts, blinking cursor, thin grid lines, premium trading-terminal look",
+   "background": "дата-центр со стенами мониторов"
+  },
+  {
+   "id": 12,
+   "slug": "glass",
+   "name": "liquid-glass",
+   "whenToUse": "современно и дорого без пафоса; продуктовые ролики",
+   "palette": "белый, серебро, бледно-голубой",
+   "prompt": "translucent frosted glass cards with real depth, soft refraction, glossy highlights, iridescent edges, white silver and pale blue, lots of air, light and premium",
+   "background": "светлая студия с мягким градиентом"
+  },
+  {
+   "id": 13,
+   "slug": "obsidian",
+   "name": "кинематик-обсидиан",
+   "whenToUse": "когда нужен максимально дорогой кадр; дороже 3D-моушна",
+   "palette": "чёрный + хром + тёплое золото",
+   "prompt": "cinematic 3D chrome and smoked glass objects with depth and reflections, dramatic rim light, warm gold accents on black, lens bloom, film grain",
+   "background": "тёмная кино-пустота с волюметрическим светом"
+  },
+  {
+   "id": 14,
+   "slug": "grunge",
+   "name": "гранж-постер",
+   "whenToUse": "громкое заявление, протестный тон, «хватит это терпеть»",
+   "palette": "бумажно-белый + чернильно-чёрный + один горячий красный",
+   "prompt": "heavy grain, torn paper edges, tape strips, scratches, halftone xerox, marker scrawl, off-white paper and ink black with one hot red accent, huge condensed stamped type, raw and loud",
+   "background": "бетонная стена с рваными постерами"
+  },
+  {
+   "id": 15,
+   "slug": "sticker",
+   "name": "стикер-рисованный",
+   "whenToUse": "тёплая подача, обучение, истории; мягче чем стикер-мем",
+   "palette": "кремовая база + бирюзовый, коралловый, горчичный, еловый",
+   "prompt": "hand-painted die-cut sticker style, thick white cut-out border, soft gouache shading, glossy highlight, corners peeling, semi-realistic painted art, not flat clipart",
+   "background": "кремовая стена, оклеенная наклейками"
+  },
+  {
+   "id": 16,
+   "slug": "notebook",
+   "name": "рукописный блокнот",
+   "whenToUse": "личная история, размышление, «сел и разобрался»",
+   "palette": "тёплый белый + синие чернила + графит + охра",
+   "prompt": "real handwriting in blue ballpoint and fineliner, light pencil sketches with airy watercolour washes, hand-drawn arrows and margin notes, visible paper grain, no digital fonts, no vector shapes",
+   "background": "стол у окна с блокнотом"
+  },
+  {
+   "id": 17,
+   "slug": "chalk",
+   "name": "мел на доске",
+   "whenToUse": "объяснение по шагам, обучение, разбор схемы",
+   "palette": "тёмная грифельная доска + белый мел + цветные мелки",
+   "prompt": "white chalk handwriting on dark slate, chalk grain and dust, coloured chalk drawings, loose cross-hatched strokes, no digital fonts, no glow",
+   "background": "грифельная стена в тёплом свете"
+  },
+  {
+   "id": 18,
+   "slug": "markeditor",
+   "name": "markeditor",
+   "whenToUse": "плотный экспертный ролик с большим количеством врезок",
+   "palette": "тёплый грейд + единственный янтарный акцент",
+   "prompt": "warm graded speaker full frame, single warm apricot accent, two line subtitle: thin white lowercase over bold apricot lowercase, light layout with rounded square tile in apricot outline, frosted glass rows and cards, black rounded caption box on full bleed inserts",
+   "background": ""
+  },
+  {
+   "id": 19,
+   "slug": "refero-dimension",
+   "name": "refero-сумерки",
+   "whenToUse": "ИИ-сервисы, продукт, спокойный премиум — тёмный кадр без агрессии",
+   "palette": "матовый чёрный + янтарь→кобальт, дымка фиолета",
+   "prompt": "deep matte black canvas, frosted translucent glass panels with thin light hairline borders, whisper-light white grotesk headlines in medium weight (never heavy black), pill shaped chips, one soft dusk violet radial glow behind the key element, one signature gradient from warm amber into cobalt blue on the hero moment, no hard shadows, no extra colors",
+   "background": "matte black studio wall with faint violet dusk glow"
+  },
+  {
+   "id": 20,
+   "slug": "refero-zora",
+   "name": "refero-неон-галерея",
+   "whenToUse": "короткие дерзкие хуки, цифры и счётчики на светлом",
+   "palette": "белый + чернильный чёрный, кислотный зелёный и неоновый розовый",
+   "prompt": "stark neon gallery: clean pure white canvas, tight ink black grotesk type, thin gray hairline borders, compact cards with small rounded corners, exactly two neon accents as small pills and underlines: electric reactor green and hot voltage pink, no gradients, no shadows",
+   "background": "bright white gallery wall in soft even light"
+  },
+  {
+   "id": 21,
+   "slug": "refero-stripe",
+   "name": "refero-индиго",
+   "whenToUse": "финансы, аналитика, деловой разбор — светлый строгий кадр",
+   "palette": "белый + бледный фрост, глубокий индиго",
+   "prompt": "white canvas with cool pale frost panels, thin elegant light-weight headlines with tight letter spacing (never bold), one deep indigo violet accent reserved for the key word, crisp cards with barely rounded corners, thin pale lavender outlines, depth by subtle cool tint shifts, never shadows, generous whitespace",
+   "background": "clean white studio wall in a faint cool frost tint"
+  },
+  {
+   "id": 22,
+   "slug": "refero-dope",
+   "name": "refero-полночь",
+   "whenToUse": "истории, статусные темы, путешествия — самый дорогой тёмный кадр набора",
+   "palette": "почти чёрный + сумеречный фиолет, белый и мягкое свечение",
+   "prompt": "midnight luxury travel editorial: near black canvas with slowly drifting violet dusk clouds, white grotesk type, exactly one word of the headline set in elegant italic serif, stamped mono captions with very wide letter spacing, one signal violet used only as glow and fill (never as text color), a glass boarding pass card with a barcode, a tiny airplane with a thin contrail between beats, mono coordinate ticker near the bottom edge, everything glides slow and silky, soft violet glow pulses",
+   "background": "near black midnight sky with faint violet dusk clouds"
+  },
+  {
+   "id": 23,
+   "slug": "refero-assurestor",
+   "name": "refero-консоль",
+   "whenToUse": "инфраструктура, безопасность, мониторинг, «пульт управления»",
+   "palette": "тёмная олива + кислотный лайм",
+   "prompt": "forest bunker command console: dark olive canvas, flat panels separated by tonal green shifts (never shadows), white text, one acid lime phosphor accent on the key word and on thin scanlines, seven segment displays on counters, mono micro labels, blinking cursor",
+   "background": "dark forest-olive console room lit by a faint lime phosphor glow"
+  }
+ ]
+}

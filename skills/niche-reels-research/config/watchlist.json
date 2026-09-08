@@ -1,0 +1,120 @@
+{
+  "version": "2026-01-01",
+  "approved_by": "владелец аккаунта",
+  "anchor_accounts": [
+    {
+      "username": "example_anchor_one",
+      "user_id": "100000000001",
+      "category": "конверт",
+      "lang": "ru",
+      "note": "ПРИМЕР. Якорный аккаунт: прямой конкурент в вашей нише, разбираем формат и механику"
+    },
+    {
+      "username": "example_anchor_two",
+      "user_id": "100000000002",
+      "category": "охват",
+      "lang": "ru",
+      "priority": true,
+      "note": "ПРИМЕР. priority=true поднимает аккаунт в приоритет отбора"
+    },
+    {
+      "username": "example_anchor_three",
+      "user_id": "100000000003",
+      "category": "конверт",
+      "lang": "en",
+      "note": "ПРИМЕР. Иноязычный донор берётся ради механики, текст адаптируется"
+    }
+  ],
+  "expansion_accounts": [
+    {
+      "username": "example_expansion_one",
+      "category": "конверт",
+      "lang": "ru",
+      "note": "ПРИМЕР. Расширение: смежная тема, проверяем 1-2 недели и отсеиваем тех, у кого нет виралок"
+    },
+    {
+      "username": "example_expansion_two",
+      "category": "охват",
+      "lang": "en",
+      "note": "ПРИМЕР. user_id необязателен, скрипт резолвит его по username и кэширует"
+    }
+  ],
+  "rejected": [
+    {
+      "username": "example_rejected_one",
+      "reason": "ПРИМЕР. Тема не совпала с нишей, обратно не возвращать без решения владельца"
+    }
+  ],
+  "active_trigger_word": "гайд",
+  "trigger_word_variants_for_comment_signal": [
+    "гайд",
+    "гайды",
+    "промпт",
+    "пак",
+    "ПАК",
+    "статья"
+  ],
+  "scoring": {
+    "viewable_above_3x_median": 30,
+    "comment_with_trigger_word_gt10": 25,
+    "views_gt_1M": 20,
+    "fresh_under_48h": 20,
+    "er_gt_5pct": 15,
+    "duration_24_60s": 10,
+    "views_over_followers": 15,
+    "comment_volume_gt100": 15,
+    "comment_volume_gt300": 25,
+    "speed_moderate": 10,
+    "speed_strong": 20,
+    "dead_cta_penalty": 25
+  },
+  "limits": {
+    "watchlist_max": 60,
+    "daily_top_pick": 10,
+    "thumbs_review_n": 15,
+    "lookback_hours": 24,
+    "fallback_lookback_hours": 48,
+    "min_primary_for_strict": 6,
+    "carousel_lookback_hours": 72,
+    "reels_max": 15,
+    "carousel_min": 5,
+    "carousel_max": 15,
+    "theme_dedup_window_days": 21,
+    "theme_similarity_threshold": 0.88,
+    "theme_model": "intfloat/multilingual-e5-large",
+    "scrape_workers": 8,
+    "reels_per_account": 12,
+    "speed_moderate_vph": 3000,
+    "speed_strong_vph": 10000,
+    "min_views_floor": 0,
+    "hook_retention_min": 0.5,
+    "style_choppy_short_words": 4,
+    "style_choppy_run": 4,
+    "style_choppy_min_sentences": 6,
+    "style_choppy_ratio": 0.55,
+    "protected_top_n": 6,
+    "protected_per_axis": 3,
+    "carousel_speed_strong_eph": 150,
+    "carousel_speed_moderate_eph": 50,
+    "dead_cta_min_views": 1000,
+    "dead_cta_median_share": 0.33,
+    "dead_cta_min_sample": 8
+  },
+  "note": "ШАБЛОН. Списки аккаунтов заполняет владелец под свою нишу: anchor_accounts это ядро прямых конкурентов, expansion_accounts это проверяемое расширение, carousel_accounts ведётся ОТДЕЛЬНО (у рилсовых аккаунтов карусели собирают мало реакций и не проходят порог). rejected держит отсеянных, чтобы они не вернулись случайно. Блоки scoring и limits это методика отбора, менять их только осознанно.",
+  "carousel_accounts": [
+    {
+      "username": "example_carousel_one",
+      "note": "ПРИМЕР. Аккаунт, который регулярно постит карусели, медиана лайков от 300",
+      "added": "2026-01-01",
+      "added_by": "<agent>",
+      "status": "active"
+    },
+    {
+      "username": "example_carousel_two",
+      "note": "ПРИМЕР. Отбор донора: 3+ карусели за 60 дней",
+      "added": "2026-01-01",
+      "added_by": "<agent>",
+      "status": "на утверждении владельца"
+    }
+  ]
+}

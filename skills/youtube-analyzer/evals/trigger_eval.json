@@ -1,0 +1,102 @@
+[
+  {
+    "query": "проанализируй YouTube-канал @your_account, топ-5",
+    "should_trigger": true,
+    "category": "self-deep-dive"
+  },
+  {
+    "query": "разбор YT Shorts у @your_channel, хочу понять что залетает",
+    "should_trigger": true,
+    "category": "shorts-analysis"
+  },
+  {
+    "query": "что у конкурента на ютубе https://www.youtube.com/@neuroreels, дай разбор последних видео",
+    "should_trigger": true,
+    "category": "url-with-intent"
+  },
+  {
+    "query": "вытащи хуки с YouTube у этого блогера: youtube.com/@creator_x",
+    "should_trigger": true,
+    "category": "hook-extraction"
+  },
+  {
+    "query": "повторить формат у этого блогера на ютубе @ai_research, разбери его топ-10",
+    "should_trigger": true,
+    "category": "format-replication"
+  },
+  {
+    "query": "research AI Shorts channel @neuro_official, top 5 by views",
+    "should_trigger": true,
+    "category": "english-research"
+  },
+  {
+    "query": "deep dive YouTube channel https://www.youtube.com/channel/UCabcdef1234567890ab, full analysis with verdicts",
+    "should_trigger": true,
+    "category": "channel-id-url"
+  },
+  {
+    "query": "почему у блогера на ютубе такие просмотры? разбери @ai_creator с транскриптами",
+    "should_trigger": true,
+    "category": "why-virals"
+  },
+  {
+    "query": "виральный разбор YT-канала @your_account: тайтлы, хуки, CTA, что копировать",
+    "should_trigger": true,
+    "category": "structured-analysis"
+  },
+  {
+    "query": "хочу понять что копировать у этого ютубера: метрики, тайтлы, темп, CTA -- полный разбор топ-5 https://www.youtube.com/@some_handle",
+    "should_trigger": true,
+    "category": "what-to-copy"
+  },
+  {
+    "query": "транскрибируй вот это видео https://www.youtube.com/watch?v=dQw4w9WgXcQ, мне нужен только текст",
+    "should_trigger": false,
+    "category": "near-miss-single-transcript"
+  },
+  {
+    "query": "перепиши скрипт этого ролика на ютубе и сделай ТЗ монтажёру https://www.youtube.com/watch?v=...",
+    "should_trigger": false,
+    "category": "near-miss-reskinner"
+  },
+  {
+    "query": "напиши мне 20 идей для YouTube Shorts на тему ai-инструментов -- хуки и тайтлы",
+    "should_trigger": false,
+    "category": "near-miss-content-creation"
+  },
+  {
+    "query": "залей этот mp4 на мой ютуб канал через api",
+    "should_trigger": false,
+    "category": "near-miss-upload"
+  },
+  {
+    "query": "проанализируй reels у @your_account -- инстаграм, не ютуб",
+    "should_trigger": false,
+    "category": "near-miss-instagram"
+  },
+  {
+    "query": "сравни просмотры моих ютубов из csv-файла, я уже выгрузил статистику",
+    "should_trigger": false,
+    "category": "near-miss-csv"
+  },
+  {
+    "query": "проанализируй мой тикток @creator -- какие видео залетают",
+    "should_trigger": false,
+    "category": "near-miss-tiktok"
+  },
+  {
+    "query": "разбери комменты под этим ютубом, мне нужна тональность аудитории, без видео",
+    "should_trigger": false,
+    "category": "near-miss-comments-only"
+  },
+  {
+    "query": "сколько подписчиков на канале @some_creator? только цифру",
+    "should_trigger": false,
+    "category": "near-miss-just-metric"
+  },
+  {
+    "query": "напиши скрипт для нового YT Shorts с нуля: хук, тело, CTA, тема как я заработал 2млн на нейросетях",
+    "should_trigger": false,
+    "category": "near-miss-script-from-scratch"
+  }
+]
