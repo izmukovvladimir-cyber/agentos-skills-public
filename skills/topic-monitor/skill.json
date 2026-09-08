@@ -2,7 +2,7 @@
   "name": "topic-monitor",
   "version": "1.1.0",
   "description": "Monitor topics of interest and get proactive alerts when important developments occur",
-  "author": "robbyczgw-cla",
+  "author": "Vladimir Izhmukov",
   "license": "MIT",
   "keywords": [
     "monitoring",
