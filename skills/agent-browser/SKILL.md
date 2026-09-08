@@ -1,7 +1,7 @@
 ---
 name: agent-browser
 description: "Управление настоящим браузером из агента: открыть страницу, кликнуть, заполнить и отправить форму, залогиниться, снять скриншот или PDF, вытащить данные со страницы, проверить вёрстку на мобильном разрешении, прогнать сценарий по своему веб-приложению. Работает поверх CLI agent-browser (vercel-labs), который управляет Chrome по CDP. Используй этот скилл, когда просят открыть сайт, зайти на страницу, нажать кнопку, заполнить форму, залогиниться куда-то, сделать скриншот сайта, спарсить или собрать данные со страницы, проверить как выглядит сайт, протестировать веб-приложение, проверить что задеплоилось, посмотреть глазами что на странице — а также при словах браузер, browser automation, скриншот страницы, headless, CDP. НЕ для: обхода капчи и антибот-защиты, накрутки, массовой регистрации аккаунтов, работы с чужими учётками без разрешения владельца."
-homepage: https://github.com/qwwiwi/agentos-skills-public
+homepage: https://github.com/izmukovvladimir-cyber/agentos-skills-public
 user-invocable: true
 metadata: {"openclaw":{"emoji":"🧭","requires":{"bins":["agent-browser"]},"optionalEnv":["AGENT_BROWSER_ALLOWED_DOMAINS","AGENT_BROWSER_ENCRYPTION_KEY","AGENT_BROWSER_HEADED"]}}
 ---

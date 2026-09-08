@@ -1,7 +1,7 @@
 ---
 name: yt-research
 description: "Research YouTube for content strategy — find what's taking off in a niche, scan competitor channels, rank videos by views and by view-velocity, and pull any video's transcript. Use this WHENEVER you need to research YouTube, find trending/viral videos on a topic, see what's blowing up on YT, scan a competitor's channel, get a YouTube video's transcript or 'what's in this video', or gather YouTube content ideas from what's working — even if the skill isn't named. Search and stats run keyless via yt-dlp; transcripts go through TranscriptAPI; a YouTube Data API key is optional for cleaner search."
-homepage: https://github.com/qwwiwi/agentos-skills-public
+homepage: https://github.com/izmukovvladimir-cyber/agentos-skills-public
 user-invocable: true
 metadata: {"openclaw":{"emoji":"📺","requires":{"bins":["yt-dlp","python3"]},"optionalEnv":["YOUTUBE_API_KEY","TRANSCRIPT_API_KEY"]}}
 ---

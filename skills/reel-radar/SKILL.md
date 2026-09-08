@@ -1,7 +1,7 @@
 ---
 name: reel-radar
 description: "Контент-разведка Instagram под съёмку: берёт эталонный аккаунт твоей ниши, сканирует его подписки, вытаскивает залетевшие рилсы за последние 7 дней, фильтрует по ключевым словам ниши, ранжирует композитно (просмотры + комментарии + ER), транскрибирует, сопоставляет с тем, что уже работает на твоём аккаунте, и отдаёт HTML-дашборд с 25 референсами плюс 15 готовых ТЗ на съёмку — телесуфлёр, монтажный timeline, код-слово. Используй этот скилл, когда просят найти рилсы, сделать разведку рилсов, придумать что снимать, собрать референсы или идеи для съёмки, разобрать что залетает у конкурентов в Instagram, подготовить ТЗ для съёмки на неделю — даже если слово «reel-radar» не произнесено. НЕ для: публикации в Instagram, накрутки, сбора персональных данных, YouTube и TikTok."
-homepage: https://github.com/qwwiwi/agentos-skills-public
+homepage: https://github.com/izmukovvladimir-cyber/agentos-skills-public
 user-invocable: true
 metadata: {"openclaw":{"emoji":"📻","requires":{"bins":["python3","curl","ffmpeg"]},"env":["HIKER_KEY","GROQ_KEY"],"optionalEnv":["TELEGRAM_BOT_TOKEN","TELEGRAM_CHAT_ID","TELEGRAM_EXPECT_BOT","TARGET_USER","CODE_WORDS_FILE","WATCHLIST","REEL_RADAR_ENV","TOP_FINAL","COMPRESS_THRESHOLD_MB","CACHE_TTL_HOURS","FORCE_CTA_CODE","FORCE_CTA_BENEFIT","FORCE_CTA_BRIDGE_LEAD"]}}
 ---
