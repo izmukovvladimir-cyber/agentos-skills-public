@@ -8,8 +8,7 @@ version = "2.0.1"
 description = "Telegram integration for Claude via the Model Context Protocol"
 readme = "README.md"
 authors = [
-    {name = "chigwell"},
-    {name = "l1v0n1"}
+    {name = "Vladimir Izhmukov"},
 ]
 license = {text = "Apache-2.0"}
 classifiers = [
