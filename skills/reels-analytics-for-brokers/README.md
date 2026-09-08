@@ -17,7 +17,7 @@
 ## Установка
 
 ```bash
-npx skills add github.com/qwwiwi/agentos-skills-public --skill reels-analytics-for-brokers
+npx skills add github.com/izmukovvladimir-cyber/agentos-skills-public --skill reels-analytics-for-brokers
 ```
 
 Или скопировать папку в `~/.claude/skills/`.
