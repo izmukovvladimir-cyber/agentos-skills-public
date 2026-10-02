@@ -12,7 +12,9 @@ TIMESPEC="$1"
 shift
 MESSAGE="$*"
 
-if ! TARGET_EPOCH=$(date -d "$TIMESPEC" +%s 2>/dev/null); then
+# GNU date rejects "in 10 minutes" and "10m"; normalise the forms SKILL.md advertises.
+TIMESPEC_NORM=$(printf '%s' "$TIMESPEC" | sed -E 's/^in +/+/; s/^\+?([0-9]+) *m$/+\1 minutes/; s/^\+?([0-9]+) *h$/+\1 hours/; s/^\+?([0-9]+) *d$/+\1 days/')
+if ! TARGET_EPOCH=$(date -d "$TIMESPEC_NORM" +%s 2>/dev/null); then
     echo "error: cannot parse timespec '${TIMESPEC}'" >&2
     exit 1
 fi
@@ -30,27 +32,25 @@ MON=$(date -d "@${TARGET_EPOCH}" +%m)
 
 # One-shot: run at specific minute/hour/day/month, then remove its own cron line.
 NONCE=$(head -c8 /dev/urandom | od -An -tx1 | tr -d ' \n')
-# Настройки доставки. Токен читается ИЗ ФАЙЛА (cron-строка читает его в момент
-# запуска, поэтому секрет не попадает в crontab), chat id — из окружения.
-#   export TELEGRAM_BOT_TOKEN_FILE=~/.secrets/telegram-bot-token
-#   export TELEGRAM_CHAT_ID=<ваш chat id>
-TOKEN_FILE="${TELEGRAM_BOT_TOKEN_FILE:-$HOME/.secrets/telegram-bot-token}"
-TG_ID="${TELEGRAM_CHAT_ID:-}"
-
-if [[ ! -r "$TOKEN_FILE" ]]; then
-    echo "error: bot token file not found at ${TOKEN_FILE} (set TELEGRAM_BOT_TOKEN_FILE)" >&2
-    exit 1
-fi
+# Delivery settings: see tg-target.sh. Token source, first match wins:
+# $TELEGRAM_BOT_TOKEN_FILE, /etc/dashi-plugin/jarvis/channel.env (edgelab-install),
+# ~/claude-gateway/secrets/bot-token, ~/.secrets/telegram-bot-token. The cron line
+# reads the token at run time, so the secret never lands in crontab.
+# Chat id: $TELEGRAM_CHAT_ID, else the first TELEGRAM_ALLOWED_USER_IDS in channel.env.
+# shellcheck source=tg-target.sh
+source "$(dirname "${BASH_SOURCE[0]}")/tg-target.sh"
+tg_resolve_target || exit 1
+TOKEN_CMD=$(tg_token_cmd) || exit 1
 
 if [[ -z "$TG_ID" ]]; then
-    echo "error: TELEGRAM_CHAT_ID is not set" >&2
+    echo "error: no chat id (set TELEGRAM_CHAT_ID or TELEGRAM_ALLOWED_USER_IDS in channel.env)" >&2
     exit 1
 fi
 
 # Escape message for cron line (no newlines, no unescaped quotes)
 SAFE_MSG=$(printf '%s' "$MESSAGE" | tr '\n' ' ' | sed 's/"/\\"/g')
 
-CRON_LINE="${MIN} ${HOUR} ${DAY} ${MON} * TOKEN=\$(cat ${TOKEN_FILE}) && curl -fsSL --max-time 30 -d \"chat_id=${TG_ID}\" -d \"text=${SAFE_MSG}\" \"https://api.telegram.org/bot\${TOKEN}/sendMessage\" >/dev/null 2>&1; (crontab -l 2>/dev/null | grep -vF 'qr:ID=${NONCE}') | crontab - # qr:ID=${NONCE}"
+CRON_LINE="${MIN} ${HOUR} ${DAY} ${MON} * TOKEN=\$(${TOKEN_CMD}) && curl -fsSL --max-time 30 -d \"chat_id=${TG_ID}\" -d \"text=${SAFE_MSG}\" \"https://api.telegram.org/bot\${TOKEN}/sendMessage\" >/dev/null 2>&1; (crontab -l 2>/dev/null | grep -vF 'qr:ID=${NONCE}') | crontab - # qr:ID=${NONCE}"
 
 ( crontab -l 2>/dev/null; echo "$CRON_LINE" ) | crontab -
 
