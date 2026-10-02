@@ -25,17 +25,25 @@ Three helper scripts live in `~/.claude/skills/quick-reminders/scripts/`:
 Reminder cron lines are tagged with `# qr:ID=<nonce>` so the skill can find
 and delete them without touching the operator's other crontab entries.
 
-Delivery goes through a Telegram bot. The token is read from the file in
-`$TELEGRAM_BOT_TOKEN_FILE` (default `~/.secrets/telegram-bot-token`), the
-recipient from `$TELEGRAM_CHAT_ID`:
+Delivery goes through the agent's Telegram bot. The token is read when the
+reminder fires (it never lands in crontab), from the first source that exists
+(`scripts/tg-target.sh`):
+
+1. `$TELEGRAM_BOT_TOKEN_FILE` -- a file with just the token (explicit override).
+2. `/etc/dashi-plugin/jarvis/channel.env`, line `TELEGRAM_BOT_TOKEN=` -- where
+   edgelab-install puts it (root:edgelab 0640, the agent reads it via its group).
+3. `~/claude-gateway/secrets/bot-token` -- old gateway installs.
+4. `~/.secrets/telegram-bot-token` -- manual setup.
+
 ```bash
-TOKEN=$(cat "${TELEGRAM_BOT_TOKEN_FILE:-$HOME/.secrets/telegram-bot-token}")
+TOKEN=$(sed -n 's/^TELEGRAM_BOT_TOKEN=//p' /etc/dashi-plugin/jarvis/channel.env | head -n1)
 curl -fsSL --max-time 30 \
   -d "chat_id=${TG_ID}" -d "text=${MESSAGE}" \
   "https://api.telegram.org/bot${TOKEN}/sendMessage"
 ```
 
-`TG_ID` comes from `$TELEGRAM_CHAT_ID`.
+`TG_ID`: `$TELEGRAM_CHAT_ID`, else the first id of `TELEGRAM_ALLOWED_USER_IDS`
+in channel.env, else `allowlist_user_ids[0]` of the old gateway config.
 
 ## Time formats supported
 
