@@ -15,6 +15,17 @@ Layer 2: Learnings   — core/LEARNINGS.md (scored, max 30)
 Layer 3: Rules       — rules.md / CLAUDE.md (promoted, owner only)
 ```
 
+## Стартовый набор
+
+Новому агенту не нужно копить уроки с нуля. Здесь лежат два файла, которые ставит установщик
+Нейроотдела, а без установщика их можно положить руками:
+
+- `references/AGENT-RULES-STARTER.md`: девять стартовых правил поведения (0-8). Блок целиком идёт
+  в конец глобального `~/.claude/CLAUDE.md`, в разделе 7 подставь свой Telegram id.
+- `references/LESSONS-STARTER.md`: двадцать общих уроков (правило, почему, как применять). Файл
+  кладётся в общую папку команды и читается целиком один раз в начале работы. Свои уроки агент
+  дальше пишет в `LEARNINGS.md`.
+
 ## CLI
 
 Engine: `~/.claude/scripts/learnings-engine.mjs`
