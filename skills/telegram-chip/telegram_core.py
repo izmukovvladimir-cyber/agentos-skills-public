@@ -174,7 +174,7 @@ def validate_id_value(value, param_name: str):
                 return None, f"Invalid {param_name}: {value}. ID is out of range."
             return int_value, None
         except ValueError:
-            if re.match(r"^@?[a-zA-Z0-9_]{5,}$", value):
+            if re.match(r"^@?[a-zA-Z0-9_]{4,}$", value):
                 return value, None
             else:
                 return None, f"Invalid {param_name}: '{value}'. Must be integer ID or username."

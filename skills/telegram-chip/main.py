@@ -316,7 +316,7 @@ def validate_id(*param_names_to_validate):
                                 )
                             return int_value, None
                         except ValueError:
-                            if re.match(r"^@?[a-zA-Z0-9_]{5,}$", value):
+                            if re.match(r"^@?[a-zA-Z0-9_]{4,}$", value):
                                 return value, None
                             else:
                                 return (
